@@ -1,0 +1,27 @@
+# Velvoria Laundry - CodeIgniter 4 front controller rules
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+
+    # Forward Authorization header before the front-controller rewrite.
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Keep real files and directories (CSS, JS, images) accessible.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Route all other requests through index.php. Do not append /$1.
+    # This avoids PATH_INFO problems with PHP CGI/NTS configurations.
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.php
+</IfModule>
+
+ServerSignature Off

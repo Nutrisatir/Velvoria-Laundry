@@ -1,0 +1,26 @@
+# XAMPP localhost subfolder front controller
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /VelvoriaLaundry/
+
+    # Deny direct browsing of internal source/configuration directories.
+    RewriteRule ^(app|system|writable|tests|vendor|database|xampp)(/|$) - [F,L,NC]
+
+    # Keep the front controller from rewriting itself.
+    RewriteRule ^index\.php$ - [L]
+
+    # Serve only files that physically exist in public/.
+    RewriteCond %{DOCUMENT_ROOT}/VelvoriaLaundry/public/$1 -f
+    RewriteRule ^(.+)$ public/$1 [L]
+
+    # Send application routes through the root front controller.
+    RewriteRule ^.*$ index.php [L,QSA]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # The root index.php remains the default DirectoryIndex, but clean routes
+    # require mod_rewrite. Enable it in XAMPP Apache for full routing.
+</IfModule>

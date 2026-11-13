@@ -1,0 +1,34 @@
+VELVORIA LAUNDRY - MIDTRANS SANDBOX
+
+PENTING: ZIP INI TIDAK MENYIMPAN SERVER KEY ATAU CLIENT KEY ASLI.
+Isi key secara lokal pada file .env setelah mengekstrak project.
+
+Tambahkan ke .env:
+midtrans.serverKey = "SERVER_KEY_SANDBOX_BARU"
+midtrans.clientKey = "CLIENT_KEY_SANDBOX"
+midtrans.isProduction = false
+midtrans.isSanitized = true
+midtrans.is3ds = true
+
+Server Key hanya untuk backend. Jangan masukkan ke JavaScript, HTML,
+repository Git, screenshot, atau file ZIP yang dibagikan.
+
+Kredensial Server Key yang sempat dibagikan melalui chat/screenshot harus
+di-revoke/regenerate dari dashboard Midtrans. Jika Signature Secret Key
+yang terlihat pada screenshot adalah kredensial aktif, regenerate juga.
+
+Popup pembayaran menggunakan Midtrans Snap. Website menambahkan overlay
+loading bertransisi halus saat token dibuat. Animasi dan isi popup Snap
+sendiri dikelola oleh Midtrans.
+
+Setelah ekstrak:
+1. Salin .env.example menjadi .env bila .env belum ada.
+2. Isi database dan kredensial Midtrans Sandbox pada .env.
+3. Jalankan composer install.
+4. Pastikan PHP CLI dan Apache/Laragon memakai PHP yang sama dan ekstensi
+   intl, mbstring, curl, mysqli aktif.
+5. Jalankan php spark migrate (dan seeder sesuai kebutuhan proyek).
+6. Restart Apache/Laragon.
+7. Tes pesanan unpaid dari akun customer.
+
+Lihat docs/MIDTRANS-SETUP.md untuk rincian konfigurasi dan pengujian.

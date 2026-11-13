@@ -1,0 +1,15 @@
+PERBAIKAN 403 XAMPP
+
+URL target: http://localhost/VelvoriaLaundry/
+
+1. Ekstrak folder VelvoriaLaundry langsung ke C:\xampp\htdocs\VelvoriaLaundry.
+2. Pastikan file index.php dan .htaccess berada di C:\xampp\htdocs\VelvoriaLaundry.
+3. Pastikan public\index.php ada.
+4. Aktifkan mod_rewrite dan AllowOverride All di Apache.
+5. Restart Apache.
+6. Buka http://localhost/VelvoriaLaundry/
+
+Jika tetap 403:
+- Periksa C:\xampp\apache\logs\error.log.
+- Pastikan folder htdocs tidak memiliki aturan Require all denied.
+- Jangan mengakses URL /VelvoriaLaundry/app atau /system; akses langsung memang diblokir.

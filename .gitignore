@@ -1,0 +1,58 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Composer dependencies
+/vendor/
+
+# CodeIgniter writable files
+/writable/cache/*
+!/writable/cache/index.html
+
+/writable/logs/*
+!/writable/logs/index.html
+
+/writable/session/*
+!/writable/session/index.html
+
+/writable/debugbar/*
+!/writable/debugbar/index.html
+
+/writable/uploads/*
+!/writable/uploads/index.html
+
+/writable/tmp/*
+!/writable/tmp/index.html
+
+# User uploaded files
+/public/uploads/
+
+# Database backups
+*.sql
+*.sql.gz
+*.sqlite
+*.db
+
+# IDE and editor
+/.idea/
+/.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Test and coverage output
+/phpunit.xml
+.phpunit.result.cache
+/coverage/
+
+# Node dependencies, if used
+/node_modules/
