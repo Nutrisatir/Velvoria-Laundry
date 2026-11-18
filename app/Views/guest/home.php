@@ -54,7 +54,7 @@
                     </div>
                     <div class="flex items-center space-x-2">
                         <i data-lucide="credit-card" class="w-4 h-4 text-purple-600 shrink-0"></i>
-                        <span class="text-xs font-medium text-velvoria-ink">Midtrans Aman</span>
+                        <span class="text-xs font-medium text-velvoria-ink">Payment Aman</span>
                     </div>
                 </div>
             </div>

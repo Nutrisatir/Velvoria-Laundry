@@ -30,6 +30,7 @@
 
 # Database backups
 *.sql
+!/database/velvoria_laundry.sql
 *.sql.gz
 *.sqlite
 *.db

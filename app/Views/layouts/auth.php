@@ -147,7 +147,7 @@
                         <i data-lucide="check" class="w-4 h-4 text-velvoria-sage"></i><span>Layanan Express 24 Jam</span>
                     </div>
                     <div class="auth-motion-item flex items-center space-x-2">
-                        <i data-lucide="check" class="w-4 h-4 text-velvoria-sage"></i><span>Midtrans Digital Pay</span>
+                        <i data-lucide="check" class="w-4 h-4 text-velvoria-sage"></i><span>Payment Aman</span>
                     </div>
                 </div>
             </div>
